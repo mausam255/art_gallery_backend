@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "server": "node index.js",
+    "server": "node index",
     "build": "npm install"
   },
   "dependencies": {
