@@ -1,5 +1,5 @@
-import galleryModel from "../models/gallery.js";
 import categoryModel from "../models/category.js";
+import galleryModel from "../models/gallery.js";
 class galleryController {
   static uploadImage = async (req, res) => {
     const { category } = req.body;
