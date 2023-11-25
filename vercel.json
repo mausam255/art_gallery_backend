@@ -8,8 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/index.js" // Point all routes to your entry file
+      "handle": "vercel" // Handle all routes with the Vercel server
     }
   ]
 }
