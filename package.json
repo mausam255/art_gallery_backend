@@ -5,7 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "server": "node index"
+    "server": "node index.js",
+    "build": "npm install"
   },
   "dependencies": {
     "cors": "^2.8.5",
