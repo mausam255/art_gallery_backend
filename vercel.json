@@ -1,14 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.js", // Specify the entry file for your Node.js application
-      "use": "@vercel/node" // Use the Node.js builder
-    }
-  ],
-  "routes": [
-    {
-      "handle": "vercel" // Handle all routes with the Vercel server
-    }
-  ]
-}
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
+    ]
+  }
