@@ -1,7 +1,7 @@
 import cors from "cors";
 import express from "express";
-import connectToMongo from "./config/db.js";
-import galleryRoutes from "./routes/gallery.js";
+import connectToMongo from "../config/db.js";
+import galleryRoutes from "../routes/gallery.js";
 const app = express();
 
 // API Routes
