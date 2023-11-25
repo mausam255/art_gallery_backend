@@ -9,6 +9,10 @@ app.use(cors());
 
 app.use(express.json());
 
+app.use("/", (req, res) => {
+    res.send("Backend is running");
+});
+
 app.use("/api/v1", galleryRoutes);
 
 app.use(express.static("public/upload"));
