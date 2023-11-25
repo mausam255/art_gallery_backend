@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "server": "node index",
-    "build": "npm install"
+    "build": "npm install",
+    "vercel-build": "echo hello"
   },
   "dependencies": {
     "cors": "^2.8.5",
