@@ -1,5 +1,15 @@
 {
-    "rewrites": [
-      { "source": "/api/v1/(.*)", "destination": "/api/$1" }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js", // Specify the entry file for your Node.js application
+      "use": "@vercel/node" // Use the Node.js builder
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js" // Point all routes to your entry file
+    }
+  ]
+}
