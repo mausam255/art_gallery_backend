@@ -21,7 +21,7 @@ router.post(
   upload.single("image"),
   galleryController.uploadImage
 );
-router.post("/test", (req, res) => {
+router.get("/test", (req, res) => {
   res.send("Test is working");
 });
 
