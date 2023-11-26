@@ -1,6 +1,7 @@
 const categoryModel = require("../models/category.js");
 const galleryModel = require("../models/gallery.js");
-class galleryController {
+
+class GalleryController {
   static uploadImage = async (req, res) => {
     const { category } = req.body;
     try {
@@ -79,4 +80,4 @@ class galleryController {
   };
 }
 
-export default galleryController;
+module.exports = GalleryController;
