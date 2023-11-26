@@ -1,25 +1,34 @@
-const cors = require("cors");
-const express = require("express");
-const connectToMongo = require("../config/db.js");
-const galleryRoutes = require("../routes/gallery.js");
+import cors from "cors";
+import express from "express";
+import connectToMongo from "../config/db.js";
+import galleryRoutes from "../routes/gallery.js";
+
 const app = express();
 
-// API Routes
+// Middleware
 app.use(cors());
-
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Express on Vercel");
-});
+// Static file serving
+app.use(express.static("public/upload"));
 
+// API Routes
 app.use("/api/v1", galleryRoutes);
 
-// app.use(express.static("public/upload"));
-
-const PORT = 8000;
-
-connectToMongo();
-app.listen(PORT, () => {
-  console.log(`api is running on http://localhost:${PORT}`);
+// Default route
+app.use("/", (req, res) => {
+    res.send("Backend is running");
 });
+
+const PORT = process.env.PORT || 8000;
+
+// Connect to MongoDB and start the server
+connectToMongo()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`API is running on http://localhost:${PORT}`);
+        });
+    })
+    .catch((error) => {
+        console.error("Error connecting to MongoDB:", error);
+    });
