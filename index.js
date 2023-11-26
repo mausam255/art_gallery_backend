@@ -9,13 +9,13 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use("/", (req, res) => {
-    res.send("Backend is running");
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
 });
 
 app.use("/api/v1", galleryRoutes);
 
-app.use(express.static("public/upload"));
+// app.use(express.static("public/upload"));
 
 const PORT = 8000;
 
