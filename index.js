@@ -1,7 +1,7 @@
-import cors from "cors";
-import express from "express";
-import connectToMongo from "../config/db.js";
-import galleryRoutes from "../routes/gallery.js";
+const cors = require("cors");
+const express = require("express");
+const connectToMongo = require("../config/db.js");
+const galleryRoutes = require("../routes/gallery.js");
 const app = express();
 
 // API Routes

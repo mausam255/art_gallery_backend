@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const db_uri='mongodb+srv://mausammishra2000:Mausam@cluster0.twaertl.mongodb.net/art?retryWrites=true&w=majority'
 const connectToMongo = async () => {
   const res = await mongoose.connect(

@@ -1,6 +1,7 @@
-import express from "express";
-import multer from "multer";
-import galleryController from "../controllers/galleryController.js";
+const express = require("express");
+const multer = require("multer");
+const galleryController = require("../controllers/galleryController.js");
+
 const router = express.Router();
 
 const storage = multer.diskStorage({

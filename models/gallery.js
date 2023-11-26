@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
+
 
 const gallerySchema = new mongoose.Schema({
   name: {
