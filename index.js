@@ -20,6 +20,8 @@ app.use("/", (req, res) => {
     res.send("Backend is running");
 });
 
+app.get('/favicon.ico', (req, res) => res.status(204))
+
 const PORT = process.env.PORT || 8000;
 
 // Connect to MongoDB and start the server
