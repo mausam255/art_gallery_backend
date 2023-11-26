@@ -20,6 +20,11 @@ app.use("/", (req, res) => {
     res.send("Backend is running");
 });
 
+// Redirect all other API requests
+app.use("/api/*", (req, res) => {
+  res.status(404).json({ error: "Not a valid API request" });
+});
+
 app.get('/favicon.ico', (req, res) => res.status(204))
 
 const PORT = process.env.PORT || 8000;
