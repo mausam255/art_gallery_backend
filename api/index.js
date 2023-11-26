@@ -15,11 +15,6 @@ app.use(express.static("public/upload"));
 // API Routes
 app.use("/api/v1",galleryRoutes);
 
-// Default route
-app.use("/", (req, res) => {
-    res.send("Backend is running");
-});
-
 // Redirect all other API requests
 app.use("/api/*", (req, res) => {
   res.status(404).json({ error: "Not a valid API request" });
