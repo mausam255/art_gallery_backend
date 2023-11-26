@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 const galleryController = require("../controllers/galleryController.js");
+const { route } = require("express/lib/application.js");
 
 const router = express.Router();
 
@@ -20,6 +21,9 @@ router.post(
   upload.single("image"),
   galleryController.uploadImage
 );
+router.post("/test", (req, res) => {
+  res.send("Test is working");
+});
 
 router.post("/add/category", galleryController.addNewCategory);
 router.get("/get/categories", galleryController.getAllCategories);
