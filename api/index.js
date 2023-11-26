@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(express.static("public/upload"));
 
 // API Routes
-app.use("/api/v1", galleryRoutes);
+app.use("/api/v1", (req, res) => {
+    galleryRoutes
+});
 
 // Default route
 app.use("/", (req, res) => {
